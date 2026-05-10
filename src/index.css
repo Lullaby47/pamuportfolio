@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  color: #1b1b24;
+  background: #f5f2fb;
+  font-family: "Aptos Display", "Segoe UI Variable Display", "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  background: #f5f2fb;
+  color: #1b1b24;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page-shell {
+  position: relative;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(183, 167, 255, 0.28), transparent 28%),
+    radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.72), transparent 22%),
+    linear-gradient(180deg, #f7f4ff 0%, #f0ecf7 45%, #f8f6fb 100%);
+}
+
+.zipper-scene {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.zipper-scene-idle {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.zipper-gap {
+  fill: #f5edf4;
+}
+
+.fabric-panel {
+  fill: url(#fabricBase);
+}
+
+.fabric-grain {
+  fill: url(#fabricHighlight);
+  opacity: 0.5;
+}
+
+.cover-emoji-layer {
+  mix-blend-mode: screen;
+}
+
+.cover-emoji-backdrop {
+  fill: rgba(255, 236, 244, 0.2);
+  filter: blur(0.35px);
+}
+
+.cover-emoji-core {
+  fill: rgba(255, 250, 252, 0.18);
+}
+
+.cover-emoji {
+  filter:
+    drop-shadow(0 0 8px rgba(255, 236, 244, 0.22))
+    drop-shadow(0 1px 4px rgba(58, 38, 60, 0.18));
+  transform-box: fill-box;
+  transform-origin: center;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.fabric-sheen {
+  opacity: 0.2;
+}
+
+.fabric-sheen-upper {
+  fill: url(#fabricSheenUpper);
+}
+
+.fabric-sheen-lower {
+  fill: url(#fabricSheenLower);
+}
+
+.zip-track {
+  fill: none;
+  stroke: rgba(74, 47, 70, 0.78);
+  stroke-width: 0.72;
+  stroke-linecap: round;
+}
+
+.zip-track-inner {
+  fill: none;
+  stroke: rgba(255, 239, 245, 0.28);
+  stroke-width: 0.1;
+  stroke-linecap: round;
+}
+
+.zip-tooth {
+  fill: url(#metalFill);
+  stroke: rgba(143, 99, 94, 0.26);
+  stroke-width: 0.03;
+}
+
+.zip-tooth-shine {
+  fill: none;
+  stroke: rgba(255, 247, 244, 0.52);
+  stroke-width: 0.025;
+  stroke-linecap: round;
+}
+
+.puller-body {
+  fill: url(#metalFill);
+  stroke: rgba(144, 102, 96, 0.2);
+  stroke-width: 0.08;
+}
+
+.puller-core {
+  fill: rgba(119, 84, 90, 0.8);
+}
+
+.puller-loop {
+  fill: url(#metalFill);
+}
+
+.puller-loop-cutout {
+  fill: rgba(74, 52, 72, 0.94);
+}
